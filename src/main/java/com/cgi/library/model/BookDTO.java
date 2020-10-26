@@ -1,9 +1,6 @@
 package com.cgi.library.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import java.time.LocalDate;
-import java.util.List;
 import java.util.UUID;
 
 public class BookDTO {
@@ -27,9 +24,6 @@ public class BookDTO {
     private LocalDate dueDate;
 
     private String comment;
-
-    @JsonBackReference
-    private List<CheckOutDTO> checkOuts;
 
     public UUID getId() {
         return id;
@@ -111,11 +105,4 @@ public class BookDTO {
         this.comment = comment;
     }
 
-    public List<CheckOutDTO> getCheckOuts() {
-        return checkOuts;
-    }
-
-    public void setCheckOuts(List<CheckOutDTO> checkOuts) {
-        this.checkOuts = checkOuts;
-    }
 }

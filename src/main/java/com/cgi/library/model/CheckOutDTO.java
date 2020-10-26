@@ -1,7 +1,5 @@
 package com.cgi.library.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -13,7 +11,6 @@ public class CheckOutDTO {
 
     private String borrowerLastName;
 
-    @JsonManagedReference
     private BookDTO borrowedBook;
 
     private LocalDate checkedOutDate;
